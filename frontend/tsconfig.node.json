@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",  // Use CommonJS module system for Node.js
+    "target": "ES6",       // Target a compatible ECMAScript version
+    "outDir": "./dist",    // Output directory for Node.js files
+    "rootDir": "./src",    // Root directory for Node.js source files
+    "baseUrl": ".",        // Use the base directory
+    "paths": {
+      "@/*": ["./src/*"]   // Ensure the same aliasing
+    }
+  },
+  "include": ["./src/**/*.ts"],  // Include TypeScript files from the src directory
+  "exclude": ["node_modules", "dist"]
+}
